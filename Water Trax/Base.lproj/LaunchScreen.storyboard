@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erda-estremera-eMX1aIAp9Nw-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="Bpk-VI-wgM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="THEPICK3 copy" translatesAutoresizingMaskIntoConstraints="NO" id="efC-Sv-1Xd">
+                                <rect key="frame" x="9" y="172.66666666666663" width="414" height="391"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="391" id="1gh-5P-Zqz"/>
+                                    <constraint firstAttribute="width" constant="414" id="Vbt-F7-vlE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bpk-VI-wgM" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ENq-22-trI"/>
+                            <constraint firstItem="efC-Sv-1Xd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-80" id="ES5-aH-kf1"/>
+                            <constraint firstAttribute="trailing" secondItem="Bpk-VI-wgM" secondAttribute="trailing" id="KA1-uf-UxR"/>
+                            <constraint firstAttribute="bottom" secondItem="Bpk-VI-wgM" secondAttribute="bottom" id="Kuv-NE-xzl"/>
+                            <constraint firstItem="efC-Sv-1Xd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="9" id="PWE-gF-BBG"/>
+                            <constraint firstItem="Bpk-VI-wgM" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="jPQ-bc-OeN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.275362318840585" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="THEPICK3 copy" width="1330.6666259765625" height="1307.3333740234375"/>
+        <image name="erda-estremera-eMX1aIAp9Nw-unsplash" width="915.33331298828125" height="1560.3333740234375"/>
+    </resources>
+</document>
