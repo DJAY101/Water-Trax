@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class HousesTableViewController: UITableViewController {
+class HousesTableViewController: UITableViewController,{
     
      var houseNameArray = ["House1", "Apartment1"]
      var houseAddressDict = ["House1" : "39 Parkland Avanue", "Apartment1" : "18 George Street"]
@@ -33,7 +34,11 @@ class HousesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "MyTestCell")
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! SwipeTableViewCell
+        //cell.delegate = self
+        //  return cell
+        // }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HousesCell", for: indexPath) as! SwipeTableViewCell
         
         
         let houseName = houseNameArray[indexPath.row]
@@ -44,6 +49,8 @@ class HousesTableViewController: UITableViewController {
         cell.detailTextLabel?.text = String(houseAddressDict[houseName]!)
         cell.detailTextLabel?.textColor = .lightGray
         cell.detailTextLabel?.font = .systemFont(ofSize: 15)
+        
+        cell.delegate = self
         
         return cell
     }
@@ -96,3 +103,4 @@ class HousesTableViewController: UITableViewController {
     
 }
 }
+extension 

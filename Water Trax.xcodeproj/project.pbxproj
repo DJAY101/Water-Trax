@@ -15,26 +15,8 @@
 		1B9EE152235545A5001D77D7 /* Water_Trax.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EE150235545A5001D77D7 /* Water_Trax.xcdatamodeld */; };
 		1B9EE154235545A7001D77D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9EE153235545A7001D77D7 /* Assets.xcassets */; };
 		1B9EE157235545A7001D77D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9EE155235545A7001D77D7 /* LaunchScreen.storyboard */; };
-		1B9EE162235545A7001D77D7 /* Water_TraxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EE161235545A7001D77D7 /* Water_TraxTests.swift */; };
-		1B9EE16D235545A8001D77D7 /* Water_TraxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EE16C235545A8001D77D7 /* Water_TraxUITests.swift */; };
+		673B1CCAB885579562284177 /* Pods_Water_Trax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F0D62591621C0B8486483 /* Pods_Water_Trax.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1B9EE15E235545A7001D77D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B9EE13C235545A5001D77D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B9EE143235545A5001D77D7;
-			remoteInfo = "Water Trax";
-		};
-		1B9EE169235545A8001D77D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B9EE13C235545A5001D77D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B9EE143235545A5001D77D7;
-			remoteInfo = "Water Trax";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B2F1E782357249D0066DC38 /* HousesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesTableViewController.swift; sourceTree = "<group>"; };
@@ -47,12 +29,19 @@
 		1B9EE153235545A7001D77D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B9EE156235545A7001D77D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B9EE158235545A7001D77D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B9EE15D235545A7001D77D7 /* Water TraxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water TraxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9EE161235545A7001D77D7 /* Water_TraxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_TraxTests.swift; sourceTree = "<group>"; };
 		1B9EE163235545A7001D77D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B9EE168235545A8001D77D7 /* Water TraxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water TraxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9EE16C235545A8001D77D7 /* Water_TraxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_TraxUITests.swift; sourceTree = "<group>"; };
 		1B9EE16E235545A8001D77D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD0A8D1854A466C85B7EFB8 /* Pods-Water Trax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Trax.debug.xcconfig"; path = "Target Support Files/Pods-Water Trax/Pods-Water Trax.debug.xcconfig"; sourceTree = "<group>"; };
+		3C2845C23370F9E5FF890EB3 /* Pods-Water Trax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Trax.release.xcconfig"; path = "Target Support Files/Pods-Water Trax/Pods-Water Trax.release.xcconfig"; sourceTree = "<group>"; };
+		3F7F0D62591621C0B8486483 /* Pods_Water_Trax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_Trax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A2D0B3222F84E68884F803 /* Pods_Water_Trax_Water_TraxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_Trax_Water_TraxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		538A1B6342A8A6DE33BCD19A /* Pods-Water Trax-Water TraxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Trax-Water TraxUITests.release.xcconfig"; path = "Target Support Files/Pods-Water Trax-Water TraxUITests/Pods-Water Trax-Water TraxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8C70CFCC3263B5939052FBAB /* Pods_Water_TraxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_TraxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9AB5FC1B9E3F04B18FA6DF /* Pods-Water Trax-Water TraxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Trax-Water TraxUITests.debug.xcconfig"; path = "Target Support Files/Pods-Water Trax-Water TraxUITests/Pods-Water Trax-Water TraxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4F46BD81E00519D9ECF6A17 /* Pods-Water TraxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water TraxTests.release.xcconfig"; path = "Target Support Files/Pods-Water TraxTests/Pods-Water TraxTests.release.xcconfig"; sourceTree = "<group>"; };
+		F4838213B772B259F56070D7 /* Pods-Water TraxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water TraxTests.debug.xcconfig"; path = "Target Support Files/Pods-Water TraxTests/Pods-Water TraxTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,20 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B9EE15A235545A7001D77D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B9EE165235545A8001D77D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				673B1CCAB885579562284177 /* Pods_Water_Trax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +87,8 @@
 				1B9EE160235545A7001D77D7 /* Water TraxTests */,
 				1B9EE16B235545A8001D77D7 /* Water TraxUITests */,
 				1B9EE145235545A5001D77D7 /* Products */,
+				DA3ED3E5BBFEEDA978BAAAD6 /* Pods */,
+				F7180BC2C314A3FA2F906FB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				1B9EE144235545A5001D77D7 /* WaterTrax.app */,
-				1B9EE15D235545A7001D77D7 /* Water TraxTests.xctest */,
-				1B9EE168235545A8001D77D7 /* Water TraxUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +134,29 @@
 			path = "Water TraxUITests";
 			sourceTree = "<group>";
 		};
+		DA3ED3E5BBFEEDA978BAAAD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CD0A8D1854A466C85B7EFB8 /* Pods-Water Trax.debug.xcconfig */,
+				3C2845C23370F9E5FF890EB3 /* Pods-Water Trax.release.xcconfig */,
+				BA9AB5FC1B9E3F04B18FA6DF /* Pods-Water Trax-Water TraxUITests.debug.xcconfig */,
+				538A1B6342A8A6DE33BCD19A /* Pods-Water Trax-Water TraxUITests.release.xcconfig */,
+				F4838213B772B259F56070D7 /* Pods-Water TraxTests.debug.xcconfig */,
+				E4F46BD81E00519D9ECF6A17 /* Pods-Water TraxTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F7180BC2C314A3FA2F906FB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F7F0D62591621C0B8486483 /* Pods_Water_Trax.framework */,
+				42A2D0B3222F84E68884F803 /* Pods_Water_Trax_Water_TraxUITests.framework */,
+				8C70CFCC3263B5939052FBAB /* Pods_Water_TraxTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B9EE171235545A8001D77D7 /* Build configuration list for PBXNativeTarget "Water Trax" */;
 			buildPhases = (
+				9AB692A6464B4BED1D48043F /* [CP] Check Pods Manifest.lock */,
 				1B9EE140235545A5001D77D7 /* Sources */,
 				1B9EE141235545A5001D77D7 /* Frameworks */,
 				1B9EE142235545A5001D77D7 /* Resources */,
+				4BD9D44C515B81C24EC1AD93 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,42 +178,6 @@
 			productName = "Water Trax";
 			productReference = 1B9EE144235545A5001D77D7 /* WaterTrax.app */;
 			productType = "com.apple.product-type.application";
-		};
-		1B9EE15C235545A7001D77D7 /* Water TraxTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B9EE174235545A8001D77D7 /* Build configuration list for PBXNativeTarget "Water TraxTests" */;
-			buildPhases = (
-				1B9EE159235545A7001D77D7 /* Sources */,
-				1B9EE15A235545A7001D77D7 /* Frameworks */,
-				1B9EE15B235545A7001D77D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1B9EE15F235545A7001D77D7 /* PBXTargetDependency */,
-			);
-			name = "Water TraxTests";
-			productName = "Water TraxTests";
-			productReference = 1B9EE15D235545A7001D77D7 /* Water TraxTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1B9EE167235545A8001D77D7 /* Water TraxUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B9EE177235545A8001D77D7 /* Build configuration list for PBXNativeTarget "Water TraxUITests" */;
-			buildPhases = (
-				1B9EE164235545A8001D77D7 /* Sources */,
-				1B9EE165235545A8001D77D7 /* Frameworks */,
-				1B9EE166235545A8001D77D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1B9EE16A235545A8001D77D7 /* PBXTargetDependency */,
-			);
-			name = "Water TraxUITests";
-			productName = "Water TraxUITests";
-			productReference = 1B9EE168235545A8001D77D7 /* Water TraxUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -226,14 +191,6 @@
 				TargetAttributes = {
 					1B9EE143235545A5001D77D7 = {
 						CreatedOnToolsVersion = 11.1;
-					};
-					1B9EE15C235545A7001D77D7 = {
-						CreatedOnToolsVersion = 11.1;
-						TestTargetID = 1B9EE143235545A5001D77D7;
-					};
-					1B9EE167235545A8001D77D7 = {
-						CreatedOnToolsVersion = 11.1;
-						TestTargetID = 1B9EE143235545A5001D77D7;
 					};
 				};
 			};
@@ -251,8 +208,6 @@
 			projectRoot = "";
 			targets = (
 				1B9EE143235545A5001D77D7 /* Water Trax */,
-				1B9EE15C235545A7001D77D7 /* Water TraxTests */,
-				1B9EE167235545A8001D77D7 /* Water TraxUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,21 +223,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B9EE15B235545A7001D77D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B9EE166235545A8001D77D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BD9D44C515B81C24EC1AD93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Water Trax/Pods-Water Trax-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Water Trax/Pods-Water Trax-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Water Trax/Pods-Water Trax-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AB692A6464B4BED1D48043F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Water Trax-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B9EE140235545A5001D77D7 /* Sources */ = {
@@ -297,36 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B9EE159235545A7001D77D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B9EE162235545A7001D77D7 /* Water_TraxTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B9EE164235545A8001D77D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B9EE16D235545A8001D77D7 /* Water_TraxUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1B9EE15F235545A7001D77D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1B9EE143235545A5001D77D7 /* Water Trax */;
-			targetProxy = 1B9EE15E235545A7001D77D7 /* PBXContainerItemProxy */;
-		};
-		1B9EE16A235545A8001D77D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1B9EE143235545A5001D77D7 /* Water Trax */;
-			targetProxy = 1B9EE169235545A8001D77D7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1B9EE14D235545A5001D77D7 /* Main.storyboard */ = {
@@ -464,6 +418,7 @@
 		};
 		1B9EE172235545A8001D77D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD0A8D1854A466C85B7EFB8 /* Pods-Water Trax.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +437,7 @@
 		};
 		1B9EE173235545A8001D77D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C2845C23370F9E5FF890EB3 /* Pods-Water Trax.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,90 +451,6 @@
 				PRODUCT_NAME = WaterTrax;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		1B9EE175235545A8001D77D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AAH7D59VBU;
-				INFOPLIST_FILE = "Water TraxTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DJAY.Water-TraxTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Water Trax.app/Water Trax";
-			};
-			name = Debug;
-		};
-		1B9EE176235545A8001D77D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AAH7D59VBU;
-				INFOPLIST_FILE = "Water TraxTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DJAY.Water-TraxTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Water Trax.app/Water Trax";
-			};
-			name = Release;
-		};
-		1B9EE178235545A8001D77D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AAH7D59VBU;
-				INFOPLIST_FILE = "Water TraxUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DJAY.Water-TraxUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Water Trax";
-			};
-			name = Debug;
-		};
-		1B9EE179235545A8001D77D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AAH7D59VBU;
-				INFOPLIST_FILE = "Water TraxUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DJAY.Water-TraxUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Water Trax";
 			};
 			name = Release;
 		};
@@ -599,24 +471,6 @@
 			buildConfigurations = (
 				1B9EE172235545A8001D77D7 /* Debug */,
 				1B9EE173235545A8001D77D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B9EE174235545A8001D77D7 /* Build configuration list for PBXNativeTarget "Water TraxTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B9EE175235545A8001D77D7 /* Debug */,
-				1B9EE176235545A8001D77D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B9EE177235545A8001D77D7 /* Build configuration list for PBXNativeTarget "Water TraxUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B9EE178235545A8001D77D7 /* Debug */,
-				1B9EE179235545A8001D77D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
