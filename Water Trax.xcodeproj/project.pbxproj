@@ -15,6 +15,8 @@
 		1B9EE152235545A5001D77D7 /* Water_Trax.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EE150235545A5001D77D7 /* Water_Trax.xcdatamodeld */; };
 		1B9EE154235545A7001D77D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9EE153235545A7001D77D7 /* Assets.xcassets */; };
 		1B9EE157235545A7001D77D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9EE155235545A7001D77D7 /* LaunchScreen.storyboard */; };
+		1BFE0F3F235869DC00A128CE /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFE0F3E235869DC00A128CE /* House.swift */; };
+		1BFE0F412359216900A128CE /* HousePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFE0F402359216900A128CE /* HousePropertyViewController.swift */; };
 		673B1CCAB885579562284177 /* Pods_Water_Trax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7F0D62591621C0B8486483 /* Pods_Water_Trax.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		1B9EE153235545A7001D77D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B9EE156235545A7001D77D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B9EE158235545A7001D77D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BFE0F3E235869DC00A128CE /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		1BFE0F402359216900A128CE /* HousePropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePropertyViewController.swift; sourceTree = "<group>"; };
 		1CD0A8D1854A466C85B7EFB8 /* Pods-Water Trax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Trax.debug.xcconfig"; path = "Target Support Files/Pods-Water Trax/Pods-Water Trax.debug.xcconfig"; sourceTree = "<group>"; };
 		3C2845C23370F9E5FF890EB3 /* Pods-Water Trax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Water Trax.release.xcconfig"; path = "Target Support Files/Pods-Water Trax/Pods-Water Trax.release.xcconfig"; sourceTree = "<group>"; };
 		3F7F0D62591621C0B8486483 /* Pods_Water_Trax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Water_Trax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +59,7 @@
 		1B572FF02355462D005C8649 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1BFE0F3E235869DC00A128CE /* House.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -72,6 +77,7 @@
 			children = (
 				1B9EE14B235545A5001D77D7 /* LoginViewController.swift */,
 				1B2F1E782357249D0066DC38 /* HousesTableViewController.swift */,
+				1BFE0F402359216900A128CE /* HousePropertyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 			files = (
 				1B2F1E792357249D0066DC38 /* HousesTableViewController.swift in Sources */,
 				1B9EE152235545A5001D77D7 /* Water_Trax.xcdatamodeld in Sources */,
+				1BFE0F412359216900A128CE /* HousePropertyViewController.swift in Sources */,
 				1B9EE14C235545A5001D77D7 /* LoginViewController.swift in Sources */,
 				1B9EE148235545A5001D77D7 /* AppDelegate.swift in Sources */,
+				1BFE0F3F235869DC00A128CE /* House.swift in Sources */,
 				1B9EE14A235545A5001D77D7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

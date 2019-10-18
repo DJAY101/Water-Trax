@@ -91,10 +91,41 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="leG-m0-QPP" kind="show" identifier="goToProperty" id="Cya-Ct-ha1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNy-V4-mvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="80"/>
+            <point key="canvasLocation" x="2036" y="80"/>
+        </scene>
+        <!--House Property View Controller-->
+        <scene sceneID="6aL-Sh-6xT">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="leG-m0-QPP" customClass="HousePropertyViewController" customModule="WaterTrax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQ4-fM-tqw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg0-Lq-8Kr">
+                                <rect key="frame" x="186" y="438" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OfT-8f-OhB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4qt-uc-thh"/>
+                    <connections>
+                        <outlet property="textLabel" destination="sg0-Lq-8Kr" id="Xtj-aR-baO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2TM-PR-h8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3046" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oid-h1-rZK">
@@ -115,12 +146,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fyz-p9-S1n" kind="relationship" relationship="rootViewController" id="Cp5-O7-mg9"/>
+                        <segue destination="fyz-p9-S1n" kind="relationship" relationship="rootViewController" id="FlQ-tZ-a8x"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lwm-qh-cgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="-697"/>
+            <point key="canvasLocation" x="1106" y="80"/>
         </scene>
     </scenes>
     <resources>
