@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="125" y="80"/>
         </scene>
-        <!--Water Trax-->
+        <!--WATER TRAX-->
         <scene sceneID="t8v-xd-dcv">
             <objects>
                 <tableViewController modalPresentationStyle="overFullScreen" id="fyz-p9-S1n" customClass="HousesTableViewController" customModule="WaterTrax" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             <outlet property="delegate" destination="fyz-p9-S1n" id="XmG-gx-WMr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Water Trax" largeTitleDisplayMode="always" id="FyW-2K-ogg">
+                    <navigationItem key="navigationItem" title="WATER TRAX" largeTitleDisplayMode="always" id="FyW-2K-ogg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="c6l-mI-WMu">
                             <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <connections>
@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="34"/>
+                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="28"/>
                             <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">

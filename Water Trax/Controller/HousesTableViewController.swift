@@ -8,32 +8,24 @@
 
 import UIKit
 import SwipeCellKit
+import RealmSwift
 
 class HousesTableViewController: UITableViewController{
-     var houseArray = [House]()
-    
+     var houseArray: Results<House>?
+     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "adrien-olichon-_VZ2MBS7OvU-unsplash"))
         self.tableView.rowHeight = 85.0
-        let newhouse1 = House(name: "House1", address: "39 Parkland Avanue")
-        let newhouse2 = House(name: "Apartment1", address: "18 George Street")
-        houseArray.append(newhouse1)
-        houseArray.append(newhouse2)
-    
 
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadHouses()
+        
     }
    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return houseArray.count
+        return houseArray?.count ?? 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,20 +36,15 @@ class HousesTableViewController: UITableViewController{
         // }
         let cell = tableView.dequeueReusableCell(withIdentifier: "HousesCell", for: indexPath) as! SwipeTableViewCell
         
-        print(indexPath.row)
-        let houseName = houseArray[indexPath.row].houseName
-        let houseAddress = houseArray[indexPath.row].houseAddress
-        print(houseName)
-        print(houseAddress)
-        print(indexPath.row)
-        cell.textLabel?.text = houseName
-        cell.textLabel?.textColor = .systemTeal
-        cell.textLabel?.font = .systemFont(ofSize: 25)
-
-        cell.detailTextLabel?.text = houseAddress
-        cell.detailTextLabel?.textColor = .lightGray
-        cell.detailTextLabel?.font = .systemFont(ofSize: 15)
-        
+        if let House = houseArray?[indexPath.row] {
+            cell.textLabel?.text = House.houseName
+            cell.textLabel?.textColor = .systemTeal
+            cell.textLabel?.font = .systemFont(ofSize: 25)
+    
+            cell.detailTextLabel?.text = House.houseAddress
+            cell.detailTextLabel?.textColor = .lightGray
+            cell.detailTextLabel?.font = .systemFont(ofSize: 15)
+        }
         cell.delegate = self
         
         return cell
@@ -72,6 +59,30 @@ class HousesTableViewController: UITableViewController{
     @IBAction func plusButtonPressed(_ sender: UIBarButtonItem) {
         promptForNewHouse()
     }
+    
+    
+    
+    
+    func loadHouses() {
+        
+        houseArray = realm.objects(House.self)
+    
+        tableView.reloadData()
+        
+    }
+    func save(house : House) {
+           do {
+               try realm.write {
+                   realm.add(house)
+               }
+           } catch {
+               print("Error saving house \(error)")
+           }
+           
+           tableView.reloadData()
+           
+       }
+    
     
     func promptForNewHouse() {
            let AddHouseAlert = UIAlertController(title: "Create New House", message: "This is the name of the house and address", preferredStyle: .alert)
@@ -92,9 +103,11 @@ class HousesTableViewController: UITableViewController{
             if AddHouseAlert.textFields![0].text! != ""{
             let name = AddHouseAlert.textFields![0].text!
             let address = AddHouseAlert.textFields![1].text!
-            let newHouse = House(name: name, address: address)
-            self.houseArray.append(newHouse)
+            let newHouse = House()
+                newHouse.houseAddress = address
+                newHouse.houseName = name
             
+            self.save(house: newHouse)
             self.tableView.reloadData()
             } else {
                 self.promptForNewHouse()
@@ -110,19 +123,26 @@ class HousesTableViewController: UITableViewController{
            AddHouseAlert.addAction(continueAction)
             self.present(AddHouseAlert, animated: true)
        }
-    
-    
-    
+    }
 }
-}
+
 extension HousesTableViewController : SwipeTableViewCellDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
 
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             // handle action by updating model with deletion
+            if let houseForDeletion = self.houseArray?[indexPath.row] {
+                do {
+                    try self.realm.write {
+                        self.realm.delete(houseForDeletion)
+                    }
+                } catch {
+                    print("Error deleting category, \(error)")
+                }
+            }
             print("Deleted")
-            self.houseArray.remove(at: indexPath.row)
+            
         }
         let editAction = SwipeAction(style: .default, title: "Edit") { action, indexPath in
             // handle action by updating model with deletion
@@ -145,11 +165,35 @@ extension HousesTableViewController : SwipeTableViewCellDelegate {
                        
                         
                     if name != "" {
-                        self.houseArray[indexPath.row].changeHouseName(newHouseName: name)
+                        
+                        if let House = self.houseArray?[indexPath.row] {
+                            
+                            
+                            do {
+                                try self.realm.write {
+                                    House.houseName = name
+                                }
+                            } catch {
+                                print("Error saving done status, \(error)")
+                            }
+                            
+                        }
+                        
                         
                     }
                     if address != "" {
-                        self.houseArray[indexPath.row].changeHouseAddress(newAddress: address)
+                        if let House = self.houseArray?[indexPath.row] {
+                            
+                            
+                            do {
+                                try self.realm.write {
+                                    House.houseAddress = address
+                                }
+                            } catch {
+                                print("Error editing house address, \(error)")
+                            }
+                            
+                        }
                         
                     }
                     self.tableView.reloadData()

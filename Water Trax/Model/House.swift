@@ -7,23 +7,9 @@
 //
 
 import Foundation
-
-class House {
-    var houseName : String
-    var houseAddress : String
-    
-    func changeHouseName (newHouseName : String) {
-        houseName = newHouseName
-    }
-    
-    func changeHouseAddress(newAddress : String) {
-        houseAddress = newAddress
-    }
-    
-    init(name : String, address : String) {
-        houseName = name
-        houseAddress = address
-    }
-    
-    
+import RealmSwift
+class House: Object {
+    @objc dynamic var houseName : String = ""
+    @objc dynamic var houseAddress : String = ""
+    @objc dynamic var data: HouseData?
 }

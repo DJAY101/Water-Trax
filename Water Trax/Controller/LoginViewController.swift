@@ -21,6 +21,7 @@ func promptForLogin() {
       UITextField.self.placeholder = "Username"
       UITextField.self.keyboardType = .default
       UITextField.self.keyboardAppearance = .dark
+        
   }
 
   let continueAction = UIAlertAction(title: "Continue", style: .default) { [unowned UsernameAlert] _ in

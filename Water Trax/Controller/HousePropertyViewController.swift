@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HousePropertyViewController: UIViewController {
     var text:String = ""
+    let realm = try! Realm()
     
     @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         textLabel?.text = text
+
 
         // Do any additional setup after loading the view.
     }
