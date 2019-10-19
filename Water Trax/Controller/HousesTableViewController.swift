@@ -22,6 +22,16 @@ class HousesTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "WATER TRAX"
+        let tlabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        tlabel.text = self.title
+        tlabel.textColor = UIColor.white
+        tlabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        tlabel.backgroundColor = UIColor.clear
+        tlabel.adjustsFontSizeToFitWidth = true
+        tlabel.textAlignment = .center
+        self.navigationItem.titleView = tlabel
+        
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "adrien-olichon-_VZ2MBS7OvU-unsplash"))
         self.tableView.rowHeight = 85.0
         print(test101)
@@ -112,7 +122,7 @@ class HousesTableViewController: UITableViewController{
                 UITextField.self.keyboardAppearance = .dark
            }
 
-           let continueAction = UIAlertAction(title: "Continue", style: .default) { [unowned AddHouseAlert] _ in
+           let addAction = UIAlertAction(title: "Add", style: .default) { [unowned AddHouseAlert] _ in
             
             if AddHouseAlert.textFields![0].text! != ""{
             let name = AddHouseAlert.textFields![0].text!
@@ -134,7 +144,7 @@ class HousesTableViewController: UITableViewController{
            }
                
            AddHouseAlert.addAction(cancelAction)
-           AddHouseAlert.addAction(continueAction)
+           AddHouseAlert.addAction(addAction)
             self.present(AddHouseAlert, animated: true)
        }
     }

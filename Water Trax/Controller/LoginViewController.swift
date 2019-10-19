@@ -99,7 +99,7 @@ func promptForLogin() {
     
     
     func promptForPassword() {
-        let PasswordAlert = UIAlertController(title: "Login", message: "Enter your accounts password", preferredStyle: .alert)
+        let PasswordAlert = UIAlertController(title: "Login", message: "Enter password for the account \(userArray![logInUserArrayPosition].username)", preferredStyle: .alert)
         
             PasswordAlert.addTextField { (UITextField) in
             UITextField.self.placeholder = "Password"
@@ -113,7 +113,7 @@ func promptForLogin() {
             
                 let correctPassword = self.userArray?[self.logInUserArrayPosition].password
                 if password.text == correctPassword{
-                    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Log Out", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+                    
                     print (self.logInUserArrayPosition)
                     self.performSegue(withIdentifier: "goToHome", sender: self)
                 } else {
@@ -225,12 +225,12 @@ func promptForLogin() {
        }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       // if let destinationVC = segue.destination as? UINavigationController{
-        //let HousesTableViewController = destinationVC.topViewController as! HousesTableViewController
-           // Your preparation code here
-           // HousesTableViewController.selectedUser = self.userArray![logInUserArrayPosition]
-            
-        //}
+        let item = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(self.navigationController?.popViewController))
+
+        item.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 14)!], for: .normal)
+
+       navigationItem.backBarButtonItem = item
+        
        
         let destinationVC = segue.destination as! HousesTableViewController
             destinationVC.selectedUser = self.userArray![logInUserArrayPosition]

@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let newFont = UIFont(name: "Avenir Next", size: 6.0)!
+        let color = UIColor.white
+
+       
+        
+        
         
         print(Realm.Configuration.defaultConfiguration.fileURL)
      do {
