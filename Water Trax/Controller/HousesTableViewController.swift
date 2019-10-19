@@ -28,6 +28,9 @@ class HousesTableViewController: UITableViewController{
         loadHouses()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

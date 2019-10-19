@@ -24,15 +24,18 @@ class LoginViewController: UIViewController {
         admin.username = "DJAY"
         admin.password = "12345"
         loadUsers()
-        
+        logInUserArrayPosition = -1
         if userArray!.count == 0 {
             print("yep its nil")
             save(user: admin)
         }
         
-        
-        promptForLogin()
+        waitThenPromp(prompt: "Username")
       }
+    
+    override func viewWillAppear(_ animated: Bool) {
+              self.navigationController?.isNavigationBarHidden = true
+          }
 func promptForLogin() {
   let UsernameAlert = UIAlertController(title: "Login", message: "This is the name for your account", preferredStyle: .alert)
       UsernameAlert.addTextField { (UITextField) in
@@ -91,6 +94,8 @@ func promptForLogin() {
             
                 let correctPassword = self.userArray?[self.logInUserArrayPosition].password
                 if password.text == correctPassword{
+                    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Log Out", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+                    print (self.logInUserArrayPosition)
                     self.performSegue(withIdentifier: "goToHome", sender: self)
                 } else {
                     self.waitThenPromp(prompt: "Password")
@@ -164,7 +169,7 @@ func promptForLogin() {
             self.save(user: newUser)
             self.logInUserArrayPosition = self.userArray!.count - 1
             
-            
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Log Out", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
             self.performSegue(withIdentifier: "goToHome", sender: self)
             
             
@@ -200,12 +205,16 @@ func promptForLogin() {
        }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? UINavigationController{
-        let HousesTableViewController = destinationVC.topViewController as! HousesTableViewController
+       // if let destinationVC = segue.destination as? UINavigationController{
+        //let HousesTableViewController = destinationVC.topViewController as! HousesTableViewController
            // Your preparation code here
-            HousesTableViewController.selectedUser = self.userArray![logInUserArrayPosition]
+           // HousesTableViewController.selectedUser = self.userArray![logInUserArrayPosition]
             
-        }
+        //}
+        
+        let destinationVC = segue.destination as! HousesTableViewController
+            destinationVC.selectedUser = self.userArray![logInUserArrayPosition]
+        
     }
     
     func waitThenPromp(prompt : String) {
