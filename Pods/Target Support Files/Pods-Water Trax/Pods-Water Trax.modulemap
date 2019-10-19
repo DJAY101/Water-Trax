@@ -1,0 +1,6 @@
+framework module Pods_Water_Trax {
+  umbrella header "Pods-Water Trax-umbrella.h"
+
+  export *
+  module * { export * }
+}
