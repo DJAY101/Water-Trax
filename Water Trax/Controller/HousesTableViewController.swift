@@ -13,12 +13,18 @@ import RealmSwift
 class HousesTableViewController: UITableViewController{
      var houseArray: Results<House>?
      let realm = try! Realm()
+     var test101 = String()
+    var selectedUser : User? {
+        didSet{
+            loadHouses()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "adrien-olichon-_VZ2MBS7OvU-unsplash"))
         self.tableView.rowHeight = 85.0
-
+        print(test101)
         loadHouses()
         
     }
@@ -44,6 +50,11 @@ class HousesTableViewController: UITableViewController{
             cell.detailTextLabel?.text = House.houseAddress
             cell.detailTextLabel?.textColor = .lightGray
             cell.detailTextLabel?.font = .systemFont(ofSize: 15)
+        } else {
+            cell.textLabel?.text = "No House Added"
+            cell.textLabel?.textColor = .systemTeal
+            cell.textLabel?.font = .systemFont(ofSize: 25)
+    
         }
         cell.delegate = self
         
@@ -64,8 +75,8 @@ class HousesTableViewController: UITableViewController{
     
     
     func loadHouses() {
-        
-        houseArray = realm.objects(House.self)
+        //todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
+        houseArray = selectedUser?.houses.sorted(byKeyPath: "houseName", ascending: true)
     
         tableView.reloadData()
         
@@ -73,7 +84,7 @@ class HousesTableViewController: UITableViewController{
     func save(house : House) {
            do {
                try realm.write {
-                   realm.add(house)
+                selectedUser?.houses.append(house)
                }
            } catch {
                print("Error saving house \(error)")
@@ -124,7 +135,8 @@ class HousesTableViewController: UITableViewController{
             self.present(AddHouseAlert, animated: true)
        }
     }
-}
+    
+ }
 
 extension HousesTableViewController : SwipeTableViewCellDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {

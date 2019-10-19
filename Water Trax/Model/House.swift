@@ -11,5 +11,8 @@ import RealmSwift
 class House: Object {
     @objc dynamic var houseName : String = ""
     @objc dynamic var houseAddress : String = ""
+    var user = LinkingObjects(fromType: User.self, property: "houses")
     @objc dynamic var data: HouseData?
+    
+    
 }
