@@ -12,21 +12,24 @@ import RealmSwift
 class LoginViewController: UIViewController {
     let realm = try! Realm()
     var signUpUsername = String()
-    var logInUserArrayPosition : Int = -1
+    var logInUserArrayPosition : Int = 0
     var userArray: Results<User>?
     
-    let admin = User()
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
         // Do any additional setup after loading the view.
-        admin.username = "DJAY"
-        admin.password = "12345"
+        
         loadUsers()
-        logInUserArrayPosition = -1
+        logInUserArrayPosition = 0
+        
         if userArray!.count == 0 {
             print("yep its nil")
+            let admin = User()
+            admin.username = "DJAY"
+            admin.password = "12345"
             save(user: admin)
         }
         
@@ -36,6 +39,8 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
               self.navigationController?.isNavigationBarHidden = true
           }
+    
+    
 func promptForLogin() {
   let UsernameAlert = UIAlertController(title: "Login", message: "This is the name for your account", preferredStyle: .alert)
       UsernameAlert.addTextField { (UITextField) in
@@ -48,15 +53,27 @@ func promptForLogin() {
   let continueAction = UIAlertAction(title: "Continue", style: .default) { [unowned UsernameAlert] _ in
     let username = UsernameAlert.textFields![0]
     var correctUsername : Bool = false
-    print(username.text!)
+
     
         if self.userArray != nil {
             for user in self.userArray! {
                 if user.username == username.text! {
+                    print(self.logInUserArrayPosition)
+                    print(user.username)
                     correctUsername = true
-                    self.waitThenPromp(prompt: "Password")
+                    self.dismiss(animated: true) {
+                        self.promptForPassword()
+                        
+                    }
+                                        
                 }
+                if correctUsername != true{
                 self.logInUserArrayPosition += 1
+                    print("User array position added 1 while on \(user.username)")
+                    print(self.logInUserArrayPosition)
+                
+                
+                }
             }
             if correctUsername != true {
                 self.waitThenPromp(prompt: "Username")
@@ -79,6 +96,8 @@ func promptForLogin() {
   present(UsernameAlert, animated: true)
   }
 
+    
+    
     func promptForPassword() {
         let PasswordAlert = UIAlertController(title: "Login", message: "Enter your accounts password", preferredStyle: .alert)
         
@@ -109,6 +128,7 @@ func promptForLogin() {
         
         
         let backAction = UIAlertAction(title: "back", style: .default) { [] _ in
+            self.logInUserArrayPosition = -1
             self.waitThenPromp(prompt: "Username")
         }
             
@@ -211,7 +231,7 @@ func promptForLogin() {
            // HousesTableViewController.selectedUser = self.userArray![logInUserArrayPosition]
             
         //}
-        
+       
         let destinationVC = segue.destination as! HousesTableViewController
             destinationVC.selectedUser = self.userArray![logInUserArrayPosition]
         
